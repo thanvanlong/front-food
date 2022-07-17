@@ -35,6 +35,10 @@
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },
+  "engines": {
+    "version": "16.15.0",
+    "npm": "8.5.5"
+  },
   "scripts": {
     "start": " set PORT=3005 && react-scripts start",
     "build": "react-scripts build",
