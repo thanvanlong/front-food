@@ -6,8 +6,8 @@ axios.defaults.withCredentials = true;
 class OrderContainerService extends React.Component {
     constructor(props) {
         super(props);
-        const url = 'https://web-foods.herokuapp.com/api';
-        // const url = 'http://localhost:8080/api'
+        // const url = 'https://web-foods.herokuapp.com/api';
+        const url = 'http://localhost:8080/api'
         this.apiUrl = url;
         this.axiosJwt = axios.create();
         this.axiosJwt.interceptors.request.use(
@@ -47,7 +47,7 @@ class OrderContainerService extends React.Component {
     }
 
     async getAllCategory() {
-        const data = await axios.get(this.apiUrl + '/product/category')
+        const data = await this.axiosJwt.get(this.apiUrl + '/product/category')
         return data;
     }
 
